@@ -1,0 +1,182 @@
+/* Apply box sizing and font to all elements */
+    * {
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    /* Prevent horizontal scrolling on small screens */
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Style the main page body */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #210045;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 140px 15px 30px;
+    }
+
+    /* Style the main todo box */
+    .todo-box {
+      width: min(900px, 100%);
+      background: #eee;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    /* Style the header area */
+    .header {
+      background: #5b35a0;
+      color: white;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-size: clamp(22px, 4vw, 26px);
+      font-weight: bold;
+    }
+
+    /* Style the add task button */
+    .add-btn {
+      position: absolute;
+      right: 15px;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: white;
+      color: #5b35a0;
+      font-size: 22px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* Add a small hover effect to the add button */
+    .add-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Style the tasks container */
+    .tasks {
+      padding: 18px;
+    }
+
+    /* Style each task card */
+    .task {
+      background: white;
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      box-shadow: 0 6px 12px #999;
+      margin-bottom: 15px;
+    }
+
+    /* Style completed tasks */
+    .task.done {
+      background: #2cd22c;
+      color: white;
+    }
+
+    /* Style the task title */
+    .task-info h3 {
+      margin: 0;
+      font-size: clamp(19px, 4vw, 24px);
+    }
+
+    /* Style the date text */
+    .date {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Style the buttons container */
+    .actions {
+      display: flex;
+      gap: clamp(18px, 5vw, 50px);
+      direction: ltr;
+    }
+
+    /* Style all action buttons */
+    .actions button {
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* Style the edit button */
+    .edit {
+      background: #4d5bd8;
+    }
+
+    /* Style the complete button */
+    .done-btn {
+      background: #009b2e;
+    }
+
+    /* Style the delete button */
+    .delete {
+      background: #8b0000;
+    }
+
+    /* Add hover effect to action buttons */
+    .actions button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Make the design responsive */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+
+      .tasks {
+        padding: 14px;
+      }
+
+      .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .actions {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Make the design responsive for very small mobile screens */
+    @media (max-width: 400px) {
+      body {
+        padding: 50px 10px 20px;
+      }
+
+      .header {
+        height: 50px;
+      }
+
+      .add-btn,
+      .actions button {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+      }
+
+      .task {
+        padding: 12px;
+      }
+    }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!-- link css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link fontawsome file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- link normalize file -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Link fonts library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body dir="rtl">
+    <!-- Main todo list container -->
+    <div class="todo-box">
+
+        <!-- Header section -->
+        <div class="header">
+
+            <!-- Button used to add a new task -->
+            <button class="add-btn" onclick="addTask()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <!-- Main title -->
+            مهامي
+        </div>
+
+        <!-- Tasks list written in HTML first -->
+        <div class="tasks" id="tasks">
+
+            <!-- First default task in HTML -->
+            <div class="task">
+                <div class="task-info">
+                    <h3>قراءة كتاب</h3>
+                    <div class="date">
+                        15/10/2022 <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="edit" onclick="editTask(this)">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="done-btn" onclick="toggleTask(this)">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                    <button class="delete" onclick="deleteTask(this)">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Second default task in HTML -->
+            <div class="task done">
+                <div class="task-info">
+                    <h3>إنهاء مشروع JavaScript</h3>
+                    <div class="date">
+                        5/7/2026 <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="edit" onclick="editTask(this)">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="done-btn" onclick="toggleTask(this)" style="background:#8b0000;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button class="delete" onclick="deleteTask(this)">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Third default task in HTML -->
+            <div class="task">
+                <div class="task-info">
+                    <h3>دراسة CSS Grid</h3>
+                    <div class="date">
+                        5/7/2026 <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="edit" onclick="editTask(this)">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="done-btn" onclick="toggleTask(this)">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                    <button class="delete" onclick="deleteTask(this)">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<!-- link javascript file -->
+<script src="js/script.js"></script>
+
+</html>
